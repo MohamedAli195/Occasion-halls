@@ -16,7 +16,7 @@ function HallsInCategories() {
     useEffect(()=>{
       fetchData()
       
-    },[])
+    },[params.id])
   return (
     <>
         {

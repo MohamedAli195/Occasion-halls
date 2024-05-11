@@ -13,12 +13,6 @@ function AboutUs() {
 					<div className="max-w-sm rounded overflow-hidden shadow-lg">
 						<p> We begin the process by building a trusting relationship with you and your partner. we can coordinate ceremonies, cocktail hours, receptions, and all other wedding-related events. We offer full-service, partial planning, and 90-day coordination to suit couples with all needs, preferences, and budgets.
 						</p>
-						<ul className="ul-info">
-							<li>ُEmail:administrator@Occasionhalls.com</li>
-							<li>address : 10 main street elMenia</li>
-							<li>test</li>
-							<li>01120134830 | 01017866262 | 01553599962</li>
-						</ul>
 						<ul className="ul-icons">
 							<li>
 								<a href="#">

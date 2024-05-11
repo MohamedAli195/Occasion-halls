@@ -51,7 +51,8 @@ const Navbar = () => {
 
     <div className='bg-mainColor flex justify-between items-center h-24 px-4 w-full text-white'>
       {/* Logo */}
-      <h1 className='w-full text-3xl font-bold text-[#00df9a]'>Occasion Halls</h1>
+      <h1 className='w-full text-3xl font-bold text-[#00df9a]'>
+        <NavLink to={'/'}>Occasion Halls</NavLink></h1>
 
       {/* Desktop Navigation */}
       <ul className='hidden md:flex'>
@@ -67,7 +68,7 @@ const Navbar = () => {
           <li
             
             className='p-4 text-center	 hover:bg-[#00df9a] rounded-xl m-2 cursor-pointer duration-300 hover:text-black'
-            style={{width:100}}
+            style={{width:120}}
           >
             <NavLink to={"aboutus"}>About Us</NavLink>
             
@@ -96,7 +97,7 @@ const Navbar = () => {
             className='p-4 text-center	 hover:bg-[#00df9a] rounded-xl m-2 cursor-pointer duration-300 hover:text-black'
             style={{width:100}}
           >
-            <NavLink to={"signUp"}>Sign Up</NavLink>
+            <NavLink to={"signUp"}>SignUp</NavLink>
             
           </li>
           </>
@@ -105,7 +106,7 @@ const Navbar = () => {
           
           {
             localStorage.getItem("userToken") && <li className='p-4 text-center	 hover:bg-[#00df9a] rounded-xl m-2 cursor-pointer duration-300 hover:text-black'> 
-            <button onClick={()=>{
+            <button style={{width:70}} onClick={()=>{
              localStorage.removeItem("userToken");
              navigate("/")
             }}>Sign Out</button></li>
@@ -120,7 +121,7 @@ const Navbar = () => {
                       {
                         categories && categories.map((cat)=>(
                           <li key={cat.id}>
-                              <NavLink to={`Category/${cat.id}`} className="text-sm hover:bg-gray-100 text-gray-700 block px-4 py-2">{cat.name}</NavLink>
+                              <Link to={`Category/${cat.id}`} className="text-sm hover:bg-mainColor text-black hover:text-white block px-4 py-2">{cat.name}</Link>
                           </li>
                         ))
                       }

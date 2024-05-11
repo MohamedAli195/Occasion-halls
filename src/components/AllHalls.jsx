@@ -24,11 +24,11 @@ function AllHalls() {
             { halls &&
                 halls.map((hall)=>{
                     return (<div className="max-w-sm rounded overflow-hidden shadow-lg" key={hall.id} >
-                    <div className="px-6 py-4">
+                    <div className="px-6 py-4" >
                         <div className="font-bold text-xl mb-2">{hall.name}</div>
 
                     </div>
-                    <img className="w-full" src={hall.image} alt="Sunset in the mountains" />
+                    <img className="w-full h-64" src={hall.image} alt="Sunset in the mountains" />
                     <div className="px-6 py-4">
 
                         <p className="text-gray-700 text-base">

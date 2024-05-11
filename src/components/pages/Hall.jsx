@@ -26,15 +26,15 @@ function Hall() {
           <div className='container mx-auto px-4 my-10'>
           
             <div className='grid grid-cols-2 gap-2"'>
-              <div>
-                <img src={hallInfo.image} />
+              <div className='mr-6 rounded-lg'>
+                <img src={hallInfo.image} className='w-full h-full rounded-lg'/>
                 
                 
               </div>
               <div >
               <h3 className='text-center text-lg font-bold'>{hallInfo.name}</h3>
               <h5 className='font-bold underline text-mainColor text-center mb-4'> Price :{hallInfo.price}</h5>
-                <iframe className='rounded-lg shadow-md	' src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d56316.90538528699!2d30.813217163085955!3d28.09144200102748!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x145b24fdb18ed73f%3A0x933180e9c12b6f22!2sMinya%20Hotels%20of%20the%20Armed%20Forces!5e0!3m2!1sar!2seg!4v1715382044449!5m2!1sar!2seg" width="450" height="350" style={{ border: 0 }} allowFullScreen="" loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>
+                <iframe className='rounded-lg shadow-md	' src={hallInfo.location} width="450" height="350" style={{ border: 0 }} allowFullScreen="" loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>
                 
               </div>
             </div>

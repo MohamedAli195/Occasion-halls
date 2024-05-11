@@ -1,6 +1,9 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+.group {
+  display: none;
+}
 /* .active {
   background-color: #00df9a;
 } */

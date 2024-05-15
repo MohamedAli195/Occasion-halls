@@ -80,9 +80,11 @@ function Hall() {
                 </div>
             
             </>
-}{ dangerAlert &&
+}
+
+{ dangerAlert &&
             <>
-                <div role="alert w-full">
+                <div>
                 <div className="bg-red-500 w-full text-white font-bold rounded-t px-4 py-2">
                 {dangerAlert} at {value.startDate}
                 </div>

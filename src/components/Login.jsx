@@ -13,6 +13,8 @@ let fieldsState = {};
 fields.forEach(field=>fieldsState[field.id]='');
 
 export default function Login(){
+  
+
     const [errAlert,setErrAlert] = useState("");
     let navigate = useNavigate();
     const [loginState,setLoginState]=useState(fieldsState);
@@ -21,6 +23,7 @@ export default function Login(){
         setLoginState({...loginState,[e.target.id]:e.target.value})
         
     }
+    
 
     const handleSubmit=(e)=>{
         e.preventDefault();
@@ -31,7 +34,7 @@ export default function Login(){
     const authenticateUser = () =>{
 
         const endpoint = "https://wedding-halls.flexi-code.com/public/api/user/login";
-        console.log(loginState);
+        
         axios.post(endpoint, loginState,{"Content-Type": "application/json"}).then((data) => {
             console.log(data.data.message)
             if (data.data.message == "user logged") {
@@ -40,7 +43,7 @@ export default function Login(){
             }
             
         }).catch((err) => {
-            console.log(err)
+
              if (err.response.data.message == "email or password not correct") {
                 setErrAlert(err.response.data.message)
             }
@@ -63,7 +66,7 @@ export default function Login(){
                             type={field.type}
                             isRequired={field.isRequired}
                             placeholder={field.placeholder}
-                            
+                    
                     />
                 
                 )

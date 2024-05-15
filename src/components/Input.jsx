@@ -26,6 +26,7 @@ export default function Input({
               required={isRequired}
               className={fixedInputClass+customClass}
               placeholder={placeholder}
+
             />
           </div>
     )

@@ -18,16 +18,16 @@ export default function Signup(){
 
   const handleSubmit=(e)=>{
     e.preventDefault();
-    console.log(signupState)
+   
     createAccount()
   }
 
   //handle Signup API Integration here
   const createAccount=()=>{
-    console.log(signupState)
+   
     const endpoint = "https://wedding-halls.flexi-code.com/public/api/user/register";
     axios.post(endpoint, signupState,{"Content-Type": "application/json"}).then((data) => {
-        console.log(data)
+      
         if (data.data.message == "success message") {
             localStorage.setItem("userToken", data.data.token)
             navigate("/")

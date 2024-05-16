@@ -33,7 +33,7 @@ function HallsInCategories() {
                     </div>
                     <div className="px-6 pt-4 pb-2">
                         <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">Price :{hall.price}$</span>
-                        <Link to={`hall/${hall.id}`} className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full">
+                        <Link to={`/hall/${hall.id}`} className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full">
                             Details
                         </Link>
                     </div>

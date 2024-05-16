@@ -9,23 +9,6 @@ const DatePicker = (props) => {
     const handleValueChange = (newValue) => {
    
         setValue(newValue);
-        
-        // axios.post("https://wedding-halls.flexi-code.com/public/api/user/wedding-hall-booking",
-        //     {
-        //         wedding_hall_id: props.id,
-        //         day_of_booking: newValue.startDate
-        //     },
-        //     {
-        //         "Content-Type": "application/json",
-        //         'Authorization': `Bearer ${localStorage.getItem("userToken")}`
-        //     })
-        //     .then((data) => {
-        //         console.log(data)
-
-        //     }).catch((err) => {
-        //         console.log(err)
-
-        //     })
         async function postData(url = "", data = {}) {
             // Default options are marked with *
             const response = await fetch(url, {

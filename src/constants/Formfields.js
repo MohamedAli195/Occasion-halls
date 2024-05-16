@@ -1,6 +1,6 @@
 const loginFields=[
     {
-        labelText:"email",
+        labelText:"Ex:betar@gmail.com",
         labelFor:"email",
         id:"email",
         name:"email",
@@ -10,7 +10,7 @@ const loginFields=[
         placeholder:"Email address"   
     },
     {
-        labelText:"Password",
+        labelText:"Ex:12345678 at least 8 digit",
         labelFor:"password",
         id:"password",
         name:"password",
@@ -23,7 +23,7 @@ const loginFields=[
 
 const signupFields=[
     {
-        labelText:"name",
+        labelText:"Ex:Betar Adly",
         labelFor:"name",
         id:"name",
         name:"name",
@@ -33,7 +33,7 @@ const signupFields=[
         placeholder:"name"   
     },
     {
-        labelText:"Email address",
+        labelText:"Ex:betar@gmail.com",
         labelFor:"email",
         id:"email",
         name:"email",
@@ -43,7 +43,7 @@ const signupFields=[
         placeholder:"Email address"   
     },
     {
-        labelText:"Password",
+        labelText:"Ex:12345678 at least 8 digit",
         labelFor:"password",
         id:"password",
         name:"password",
@@ -53,7 +53,7 @@ const signupFields=[
         placeholder:"Password"   
     },
     {
-        labelText:"phone ",
+        labelText:"Ex:01120134860 at least 11 digit",
         labelFor:"phone",
         id:"phone",
         name:"phone",
@@ -63,7 +63,7 @@ const signupFields=[
         placeholder:"phone "   
     },
     {
-        labelText:"address ",
+        labelText:"ex:10 main street ",
         labelFor:"address",
         id:"address",
         name:"address",
@@ -73,7 +73,7 @@ const signupFields=[
         placeholder:"address "   
     },
     {
-        labelText:"national_id ",
+        labelText:"Ex: 29507011424688 at Least 14 digit ",
         labelFor:"national_id",
         id:"national_id",
         name:"national_id",

@@ -1,8 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import DatePicker from '../Calendar'
 import { useParams } from 'react-router-dom'
-import axios from 'axios'
-
 function Hall() {
   const [successAlert,setSuccessAlert] = useState()
   const [dangerAlert,setDangerAlert] = useState()

@@ -70,7 +70,7 @@ const Navbar = () => {
             className='p-4 text-center	 hover:bg-[#00df9a] rounded-xl m-2 cursor-pointer duration-300 hover:text-black'
             style={{width:100}}
           >
-            <NavLink to={"/"}>Home</NavLink>
+            <NavLink className='w-full' to={"/"}>Home</NavLink>
             
           </li>
           <li

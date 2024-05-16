@@ -1,9 +1,10 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { signupFields } from "../constants/Formfields"
 import FormAction from "./FormAction";
 import Input from "./Input";
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
+import ErrorAlert from './ErrorAlert';
 
 const fields=signupFields;
 let fieldsState={};
@@ -11,6 +12,11 @@ let fieldsState={};
 fields.forEach(field => fieldsState[field.id]='');
 
 export default function Signup(){
+  const [nameErr,setNameErro] = useState([])
+  const [emailErr,setEmailErro] = useState([])
+  const [nationalIDErr,setNationalIDErro] = useState([])
+  const [passwordErr,setpasswordErro] = useState([])
+  // const [errAlert,setErrAlert] = useState(errObj);
   let navigate = useNavigate();
   const [signupState,setSignupState]=useState(fieldsState);
 
@@ -33,12 +39,36 @@ export default function Signup(){
             navigate("/")
         }
     }).catch((err) => {
-        console.log(err)
+  
+    if(err.response.data.errors.email){
+      setEmailErro(err.response.data.errors.email)
+    }else{
+      setEmailErro([])
+    }
+    if(err.response.data.errors.name){
+      setNameErro(err.response.data.errors.name)
+    }else {
+      setNameErro([])
+    }
+    if(err.response.data.errors.national_id){
+      setNationalIDErro(err.response.data.errors.national_id)
+    }else{
+      setNationalIDErro([])
+    }
+    if(err.response.data.errors.password){
+      setpasswordErro(err.response.data.errors.password)
+    }else{
+      setpasswordErro([])
+    }
+    
     })
+
   }
 
+  
     return(
-        <form className="mt-8 space-y-6" onSubmit={handleSubmit}>
+      <>
+         <form className="mt-8 space-y-6" onSubmit={handleSubmit}>
         <div className="">
         {
                 fields.map(field=>
@@ -63,5 +93,27 @@ export default function Signup(){
          
 
       </form>
+      <div className='flex'>
+
+      </div>
+      {
+        
+         <ErrorAlert errorType={"Name error"} errorMsg={nameErr}/>
+      }
+      {
+         <ErrorAlert errorType={"Email error"} errorMsg={emailErr}/>
+      }
+        
+        {
+           <ErrorAlert errorType={"National ID error"} errorMsg={nationalIDErr}/>
+        }
+        {
+           <ErrorAlert errorType={"password error"} errorMsg={passwordErr}/>
+        }
+        
+      
+      </>
+     
+      
     )
 }

@@ -14,9 +14,9 @@ export default function Input({
 }){
     return(
         <div className="my-5">
-            <label htmlFor={labelFor}>
+            {/* <label htmlFor={labelFor}>
               {labelText}
-            </label>
+            </label> */}
             <input
               onChange={handleChange}
               value={value}

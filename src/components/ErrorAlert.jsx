@@ -10,7 +10,7 @@ function ErrorAlert(props) {
     <>
     {
       props.errorMsg.length != 0  &&
-            <div role="alert" className='inline-block'>
+            <div role="alert" className='inline-block mr-2'>
                 <div className="bg-red-500 text-white font-bold rounded-t px-4 py-2">
                 {props.errorType}
                 </div>

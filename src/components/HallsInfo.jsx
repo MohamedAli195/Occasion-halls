@@ -1,13 +1,37 @@
 import { Card } from '@material-tailwind/react'
-import React from 'react'
+import React, { useState } from 'react'
 import image1 from './../../public/Images/1.jpg'
 import image2 from './../../public/Images/2.jpg'
 import image3 from './../../public/Images/3.jpg'
+import axios from 'axios'
 function HallsInfo() {
+
+    const [userName,setUserName] = useState("")
+    const api_url_userData = "https://wedding-halls.flexi-code.com/public/api/user/profile"
+
+    if(localStorage.getItem("userToken")){
+            
+    axios({
+        url: api_url_userData,
+        method: 'get',
+        headers: {
+            
+          
+            'Authorization': `Bearer ${localStorage.getItem("userToken")}`
+        }
+     })
+     .then(response => {
+        setUserName(response.data.data.name)
+     }) 
+     .catch(err => {
+        console.log(err);
+     });
+    }
+
     return (
         <>
         <div className='mt-10'>
-        <h1 className='text-4xl font-extrabold dark:text-white text-center bg-gray-50 p-4 rounded-md mb-8'>Your Wedding Or Special Event Process Begins Here</h1>
+        <h1 className='text-3xl font-extrabold dark:text-white text-center bg-gray-50 p-4 rounded-md mb-8'>Hi {userName} , Your Wedding Or Special Event Process Begins Here</h1>
             <div className="grid grid-cols-3 gap-4">
 
                 <div className="max-w-sm rounded overflow-hidden shadow-lg">

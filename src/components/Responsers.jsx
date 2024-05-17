@@ -10,7 +10,7 @@ function Responsers() {
     <>
         <h2 className='text-4xl font-extrabold dark:text-white text-center bg-gray-50 p-4 rounded-md my-5'>Sponsers</h2>
 
-      <div class="grid grid-cols-6 m-5 mt-10 p-2 gap-2">
+      <div className="grid grid-cols-6 m-5 mt-10 p-2 gap-2">
         <div ><img src={hayah} alt="" className='-52	'/></div>
         <div><img src={jewel} alt="" className='h-52	'/></div>
         <div><img src={ramsis} alt=""className='h-52	' /></div>

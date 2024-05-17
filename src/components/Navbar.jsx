@@ -11,7 +11,9 @@ const Navbar = () => {
   
   //get category from api
    const api_url="https://wedding-halls.flexi-code.com/public/api/wedding-hall-categories"
+   const api_url_userData = "https://wedding-halls.flexi-code.com/public/api/user/profile"
   const [categories,setCategories] = useState([])
+  const [user,setUser]=useState([])
   const fetchData =async () => {
     try {
       await fetch(api_url).then((res)=>res.json()).then((cat)=>setCategories(cat.data))
@@ -19,8 +21,16 @@ const Navbar = () => {
       console.error("Error fetching data:", error);
     }
   };
+
+
+
+ 
+
+
+
   useEffect(()=>{
     fetchData()
+    
     
   },[])
 

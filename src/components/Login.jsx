@@ -76,7 +76,7 @@ export default function Login(){
         <FormAction handleSubmit={handleSubmit} text="Login"/>
       </form>
             {
-                errAlert && <ErrorAlert ererrorType={"Error"} errorMsg={errAlert}/>
+                errAlert && <ErrorAlert ererrorType={"Data error"} errorMsg={errAlert}/>
             }
       </>
     )

@@ -1,11 +1,12 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 import Datepicker from "react-tailwindcss-datepicker";
 
 const DatePicker = (props) => {
     const {setSuccessAlert,setDangerAlert,value,setValue} = props
   
-
+    let navigate = useNavigate();
     const handleValueChange = (newValue) => {
    
         setValue(newValue);
@@ -25,19 +26,25 @@ const DatePicker = (props) => {
             });
             return response.json(); // parses JSON response into native JavaScript objects
           }
-          if ( newValue.startDate  != null){
 
+          if(localStorage.getItem("userToken")){
+
+            if ( newValue.startDate  != null){
+              postData("https://wedding-halls.flexi-code.com/public/api/user/wedding-hall-booking", {wedding_hall_id: props.id, day_of_booking: newValue.startDate }).then((data) => {
+             if(data.message=="Wedding Hall Not Active"){
+                setDangerAlert(data.message)
+                setSuccessAlert("")
+             }else {
+                setSuccessAlert(data.message)
+                setDangerAlert("")
+             }
+    });
+    }
+
+          }else {
+            navigate("/login")
+          }
           
-          postData("https://wedding-halls.flexi-code.com/public/api/user/wedding-hall-booking", {wedding_hall_id: props.id, day_of_booking: newValue.startDate }).then((data) => {
-         if(data.message=="Wedding Hall Not Active"){
-            setDangerAlert(data.message)
-            setSuccessAlert("")
-         }else {
-            setSuccessAlert(data.message)
-            setDangerAlert("")
-         }
-});
-}
 }
 useEffect(()=>{
 

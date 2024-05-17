@@ -132,7 +132,7 @@ const Navbar = () => {
          
          <li>
          <button id="dropdownNavbarLink" data-dropdown-toggle="dropdownNavbar" className="rounded-xl text-white hover:bg-gray-50 border-b border-gray-100 md:hover:bg-transparent md:border-0  m-2 p-4 md:hover:bg-[#00df9a]  font-medium flex items-center justify-between"  onClick={handleDropDown}>Halls <svg className="w-4 h-4 ml-1" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fillRule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clipRule="evenodd"></path></svg></button>
-      <div id="dropdownNavbar" className={`absolute top-12 right-0 z-10 w-44 mt-12 bg-white rounded divide-y divide-gray-100 shadow ${
+      <div onMouseLeave={()=>setOpen(false)} id="dropdownNavbar" className={`absolute top-12 right-0 z-10 w-44 mt-12 bg-white rounded divide-y divide-gray-100 shadow ${
           isOpen ? "block" : "hidden"
         }`} >
                     <ul className="py-1 " aria-labelledby="dropdownLargeButton">
@@ -225,7 +225,7 @@ const Navbar = () => {
          
          <li>
          <button id="dropdownNavbarLink" data-dropdown-toggle="dropdownNavbar" className="rounded-xl text-white border-b border-gray-100 md:hover:bg-transparent md:border-0  m-2 p-4 hover:bg-mainColor  font-medium flex items-center justify-between"  onClick={handleDropDown}>Halls <svg className="w-4 h-4 ml-1" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fillRule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clipRule="evenodd"></path></svg></button>
-      <div id="dropdownNavbar" className={`absolute top-80 left-0 z-10 w-44 mt-12 bg-white rounded divide-y divide-gray-100 shadow ${
+      <div onMouseLeave={()=>setOpen(false)} id="dropdownNavbar" className={`absolute top-80 left-0 z-10 w-44 mt-12 bg-white rounded divide-y divide-gray-100 shadow ${
           isOpen ? "block" : "hidden"
         }`} >
                     <ul className="py-1 " aria-labelledby="dropdownLargeButton">

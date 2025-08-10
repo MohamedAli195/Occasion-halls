@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import { useEffect, useState } from 'react'
 import DatePicker from '../Calendar'
 import { useParams } from 'react-router-dom'
 function Hall() {
@@ -21,6 +21,7 @@ function Hall() {
   useEffect(() => {
     fetchData()
 
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 
   return (

@@ -1,5 +1,4 @@
 import { Carousel } from 'flowbite-react'
-import React, { useEffect, useState } from 'react'
 import slider from './../../public/Images/slider2.jpg'
 import slider2 from './../../public/Images/slider3.jpg'
 

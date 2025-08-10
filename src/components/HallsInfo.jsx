@@ -1,5 +1,4 @@
-import { Card } from '@material-tailwind/react'
-import React, { useState } from 'react'
+import  { useState } from 'react'
 import image1 from './../../public/Images/1.jpg'
 import image2 from './../../public/Images/2.jpg'
 import image3 from './../../public/Images/3.jpg'

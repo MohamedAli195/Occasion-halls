@@ -1,14 +1,16 @@
-import React, { useEffect } from 'react'
+import { useEffect } from 'react'
 
 function ErrorAlert(props) {
   useEffect(()=>{
     console.log("render/rerender")
+    // eslint-disable-next-line react/prop-types
     console.log(props.errorMsg)
 
   },[props.errorMsg.length])
   return (
     <>
     {
+      // eslint-disable-next-line react/prop-types
       props.errorMsg.length != 0  &&
             <div role="alert" className='inline-block mr-2'>
                 <div className="bg-red-500 text-white font-bold rounded-t px-4 py-2">

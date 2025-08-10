@@ -1,4 +1,3 @@
-import React from 'react'
 import hayah from './../../public/Images/hayah.png'
 import jewel from './../../public/Images/jewel.png'
 import ramsis from './../../public/Images/ramsis.jpg'

@@ -1,10 +1,10 @@
-import axios from "axios";
-import React, { useEffect, useState } from "react";
+import  { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import Datepicker from "react-tailwindcss-datepicker";
 
 const DatePicker = (props) => {
-    const {setSuccessAlert,setDangerAlert,value,setValue} = props
+    // eslint-disable-next-line react/prop-types
+    const {setSuccessAlert,setDangerAlert,value,setValue } = props
   
     let navigate = useNavigate();
     const handleValueChange = (newValue) => {
@@ -30,6 +30,7 @@ const DatePicker = (props) => {
           if(localStorage.getItem("userToken")){
 
             if ( newValue.startDate  != null){
+              // eslint-disable-next-line react/prop-types
               postData("https://wedding-halls.flexi-code.com/public/api/user/wedding-hall-booking", {wedding_hall_id: props.id, day_of_booking: newValue.startDate }).then((data) => {
              if(data.message=="Wedding Hall Not Active"){
                 setDangerAlert(data.message)

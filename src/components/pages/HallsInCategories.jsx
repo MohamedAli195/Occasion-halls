@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import { useEffect, useState } from 'react'
 import { Link, useParams } from 'react-router-dom';
 
 function HallsInCategories() {
@@ -16,6 +16,7 @@ function HallsInCategories() {
     useEffect(()=>{
       fetchData()
       
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     },[params.id])
   return (
     <>

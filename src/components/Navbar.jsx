@@ -1,6 +1,5 @@
 
-import { jwtDecode } from 'jwt-decode';
-import React, { useEffect, useState } from 'react';
+import  { useEffect, useState } from 'react';
 import { AiOutlineClose, AiOutlineMenu } from 'react-icons/ai';
 import { Link, NavLink, useNavigate } from 'react-router-dom';
 
@@ -13,7 +12,7 @@ const Navbar = () => {
    const api_url="https://wedding-halls.flexi-code.com/public/api/wedding-hall-categories"
    
   const [categories,setCategories] = useState([])
-  const [user,setUser]=useState([])
+  // const [user,setUser]=useState([])
   const fetchData =async () => {
     try {
       await fetch(api_url).then((res)=>res.json()).then((cat)=>setCategories(cat.data))
@@ -51,13 +50,13 @@ const Navbar = () => {
 
   
   // Array containing navigation items
-  const navItems = [
-    { id: 1, text: 'Home' , path:'/'},
-    { id: 2, text: 'About Us' },
-    { id: 3, text: 'Contact' ,path:'contact' },
-    { id: 4, text: 'Login',path:'login' },
-    { id: 5, text: 'Sign Up',path:'signUp' },
-  ];
+  // const navItems = [
+  //   { id: 1, text: 'Home' , path:'/'},
+  //   { id: 2, text: 'About Us' },
+  //   { id: 3, text: 'Contact' ,path:'contact' },
+  //   { id: 4, text: 'Login',path:'login' },
+  //   { id: 5, text: 'Sign Up',path:'signUp' },
+  // ];
   // extract email from JWT token 
 
 // if(localStorage.getItem("userToken")){

@@ -1,4 +1,3 @@
-import React from 'react'
 import image1 from './../../../public/Images/1.jpg'
 function AboutUs() {
   return (

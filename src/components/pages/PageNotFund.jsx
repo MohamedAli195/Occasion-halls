@@ -1,4 +1,3 @@
-import React from 'react'
 import imagNotFound from './../../../public/Images/404-error.jpg'
 function PageNotFund() {
   return (

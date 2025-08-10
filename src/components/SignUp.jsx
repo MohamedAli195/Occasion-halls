@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import { signupFields } from "../constants/Formfields"
 import FormAction from "./FormAction";
 import Input from "./Input";
